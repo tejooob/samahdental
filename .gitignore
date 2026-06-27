@@ -1,8 +1,22 @@
+# Dependencies
+/node_modules
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+
+# Production
+/build
+
 # OS / editor
 .DS_Store
 Thumbs.db
 desktop.ini
 *.log
+
+# Env
+.env*.local
 
 # Temp / scratch
 *.tmp
