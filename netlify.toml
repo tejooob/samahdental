@@ -1,0 +1,12 @@
+# Netlify configuration for the Next.js static export (output: 'export').
+# This pins the build so Netlify doesn't have to guess: it runs the build and
+# publishes the static `out/` directory.
+
+[build]
+  command = "npm run build"
+  publish = "out"
+
+[build.environment]
+  # Next.js 16 requires Node 20+.
+  NODE_VERSION = "20"
+  NEXT_TELEMETRY_DISABLED = "1"
