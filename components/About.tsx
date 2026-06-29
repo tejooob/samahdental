@@ -24,8 +24,8 @@ export default function About() {
         <div className="about-media" data-reveal="">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?auto=format&fit=crop&w=1000&q=80"
-            alt="A dentist reviewing a patient's dental X-ray together during a consultation"
+            src="/clinic-room.jpg"
+            alt="The treatment room at Samah Dental Care in Charai, Thane"
             loading="lazy"
             decoding="async"
           />
@@ -43,9 +43,11 @@ export default function About() {
           </h2>
           <p className="lead" data-reveal="" data-d="2">
             In the heart of Charai, Samah Dental Care is run by a husband-and-wife
-            team of MDS surgeons. Appointments are never rushed, treatment plans
-            are honest, and every protocol is held to a strict standard of
-            sterilisation. You are treated by the specialist, start to finish.
+            team of MDS surgeons whose skills complete each other. Dr. Dikshit
+            restores teeth to their natural health with root canals; Dr. Riddhi
+            rebuilds and replaces the ones beyond saving. Together they offer the
+            full range of dentistry for every age, with modern technique and an
+            utmost gentle approach that always keeps you in focus.
           </p>
           <ul className="points" data-reveal="" data-d="2">
             {points.map(([title, body]) => (

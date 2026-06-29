@@ -1,19 +1,19 @@
 const reasons: [string, string][] = [
   [
-    "Specialist expertise",
-    "Two MDS surgeons covering endodontics, prosthodontics and implantology under one roof.",
+    "Two specialists who complete each other",
+    "Dr. Dikshit restores teeth to their natural health with root canals; Dr. Riddhi replaces the ones that can't be saved. Complementary expertise under one roof.",
   ],
   [
-    "Genuinely painless",
-    "Advanced, gentle technique and a calm room keep every treatment comfortable.",
+    "Painless, single-sitting root canals",
+    "Most root canals are finished comfortably in a single visit, using modern, gentle, magnified technique.",
   ],
   [
-    "Uncompromising hygiene",
-    "Hospital-grade sterilisation and single-use protocols, every single time.",
+    "Single-visit dentures and implants",
+    "From same-day dentures to overdentures and dental implants, we restore your bite and smile without the long wait.",
   ],
   [
-    "Personal and honest",
-    "Tailored plans, transparent pricing, and advice you can actually trust.",
+    "Modern care, kept gentle",
+    "Every range of treatment, for every age, delivered with an utmost gentle approach that keeps you in focus.",
   ],
 ];
 
@@ -23,14 +23,14 @@ export default function Why() {
       <div className="wrap">
         <div className="sec-head">
           <p className="kicker" data-reveal="">
-            Why Samah
+            What sets us apart
           </p>
           <h2 className="h-section" data-reveal="" data-d="1">
             The difference is in how it feels
           </h2>
           <p className="lead" data-reveal="" data-d="2">
-            Specialist expertise paired with real warmth, so a visit feels less
-            like a procedure and more like being looked after.
+            Two complementary specialists, the full range of modern dentistry,
+            and a genuinely gentle approach that always keeps you in focus.
           </p>
         </div>
         <div className="why-grid" data-reveal="" data-d="1">

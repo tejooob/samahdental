@@ -2,6 +2,7 @@ type Entry = { title: string; place: string; when: string };
 
 type Doctor = {
   mono: string;
+  photo?: string;
   name: string;
   role: string;
   reg: string;
@@ -15,6 +16,7 @@ type Doctor = {
 const doctors: Doctor[] = [
   {
     mono: "DS",
+    photo: "/dr-dikshit.jpg",
     name: "Dr. Dikshit M. Solanki",
     role: "MDS · Conservative Dentistry & Endodontics",
     reg: "Certified Micro-Endodontist · Reg. A-44183",
@@ -111,15 +113,22 @@ export default function Doctors() {
       <div className="wrap profiles">
         {doctors.map((d) => (
           <article className="profile" key={d.mono} data-reveal="" data-d={d.delay}>
-            <div className="profile-id">
-              <span className="mono">{d.mono}</span>
-              <h3>{d.name}</h3>
-              <p className="role">{d.role}</p>
-              <p className="reg">{d.reg}</p>
-              <div className="ptags">
-                {d.tags.map((t) => (
-                  <span key={t}>{t}</span>
-                ))}
+            <div className={`profile-id${d.photo ? " has-photo" : ""}`}>
+              {d.photo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img src={d.photo} alt={`Portrait of ${d.name}`} className="id-photo" loading="lazy" decoding="async" />
+              ) : (
+                <span className="mono">{d.mono}</span>
+              )}
+              <div className="id-text">
+                <h3>{d.name}</h3>
+                <p className="role">{d.role}</p>
+                <p className="reg">{d.reg}</p>
+                <div className="ptags">
+                  {d.tags.map((t) => (
+                    <span key={t}>{t}</span>
+                  ))}
+                </div>
               </div>
             </div>
             <div className="profile-detail">

@@ -1,13 +1,14 @@
 const treatments = [
-  ["Root Canal Treatment", "Painless, single-sitting endodontics under magnification to save your natural tooth."],
-  ["Dental Implants", "Permanent, natural-looking tooth replacement that restores full chewing comfort."],
-  ["Smile Makeovers & Cosmetic", "Veneers, whitening and design that flatter your unique features."],
-  ["Braces & Invisalign", "Discreet, modern orthodontics to gently align teeth for adults and teens."],
+  ["Single-Sitting Root Canals", "Painless endodontics finished comfortably in one visit, saving your natural tooth under magnification."],
+  ["Single-Visit Dentures", "Well-fitting dentures designed and delivered quickly, so you regain your smile and bite without the long wait."],
+  ["Overdentures", "Implant- or root-supported dentures that stay firmly in place for confident eating and speaking."],
+  ["Semi-Fixed Partial Dentures", "Attachment-retained partials: the stability of a fixed tooth with the easy care of a removable one."],
+  ["Dental Implants", "Permanent, natural-looking replacements for missing teeth that restore full chewing comfort."],
+  ["Smile Designing", "Veneers, whitening and cosmetic work shaped around your face for a natural, confident smile."],
   ["Crowns & Bridges", "Custom, tooth-coloured restorations that rebuild strength and aesthetics."],
+  ["Braces & Invisalign", "Discreet, modern orthodontics to gently align teeth for adults and teens."],
   ["Paediatric Dentistry", "Friendly, fear-free care that builds lifelong healthy habits in children."],
   ["Preventive Care", "Cleaning, scaling and check-ups that stop problems before they start."],
-  ["Tooth Extractions", "Safe, comfortable removals including wisdom teeth, with gentle aftercare."],
-  ["Dentures & Full Rehabilitation", "Complete dentures and full-mouth rehab to restore a confident smile."],
 ];
 
 export default function Treatments() {
@@ -22,13 +23,14 @@ export default function Treatments() {
             Comprehensive dentistry, one trusted clinic
           </h2>
           <p className="lead" data-reveal="" data-d="2">
-            From a routine check-up to a complex rehabilitation, every treatment
-            is delivered with specialist precision and a gentle hand.
+            From a painless single-sitting root canal to implants and full
+            prosthodontic rehabilitation, every treatment restores function,
+            comfort, and aesthetics, for every age and with a gentle hand.
           </p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80"
-            alt="The bright, modern treatment room at Samah Dental Care"
+            src="/treatment-light.jpg"
+            alt="A treatment in progress at Samah Dental Care"
             loading="lazy"
             decoding="async"
             data-reveal=""
