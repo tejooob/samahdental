@@ -27,8 +27,8 @@ export default function Treatments() {
           </p>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?auto=format&fit=crop&w=900&q=80"
-            alt="A patient placing a clear Invisalign aligner"
+            src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=900&q=80"
+            alt="The bright, modern treatment room at Samah Dental Care"
             loading="lazy"
             decoding="async"
             data-reveal=""

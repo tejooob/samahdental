@@ -33,10 +33,14 @@ export default function SiteHeader() {
       <header className={`nav${scrolled ? " scrolled" : ""}`}>
         <div className="wrap nav-inner">
           <a href="#home" className="brand">
-            <span className="word">
-              Samah<b>.</b>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/logo-mark.png" alt="Samah Dental Care" className="brand-logo" />
+            <span className="names">
+              <span className="word">
+                Samah<b>.</b>
+              </span>
+              <span className="tag">Dental · Thane</span>
             </span>
-            <span className="tag">Dental · Thane</span>
           </a>
           <nav className="links">
             {links.map(([href, label]) => (
