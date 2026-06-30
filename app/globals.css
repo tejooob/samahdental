@@ -265,6 +265,10 @@ nav.links a:hover::after { width: 100%; }
 .quote .who b { display: block; font-weight: 600; font-size: 0.95rem; }
 .quote .who span { font-size: 0.78rem; color: var(--ink-3); }
 .quote.feature .who span { color: oklch(0.78 0.018 250); }
+.reviews-cta { display: flex; flex-direction: column; align-items: center; gap: 1.1rem; margin-top: clamp(2.4rem, 5vw, 3.4rem); text-align: center; }
+.reviews-rating { display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.96rem; color: var(--ink-2); }
+.reviews-rating .stars { color: var(--brand); letter-spacing: 0.12em; }
+.reviews-rating b { font-family: var(--serif); font-size: 1.05rem; color: var(--ink); font-weight: 600; }
 
 /* ---------- CONTACT ---------- */
 .contact { background: var(--bg-warm); }
@@ -295,6 +299,9 @@ nav.links a:hover::after { width: 100%; }
 .form-note { text-align: center; font-size: 0.78rem; color: var(--ink-3); margin-top: 0.8rem; }
 .form-ok { display: none; margin-top: 1rem; text-align: center; padding: 0.9rem 1rem; border-radius: 10px; background: var(--brand-tint); color: var(--brand-darker); font-size: 0.9rem; font-weight: 500; }
 .form-ok.show { display: block; }
+
+.contact-map { margin-top: clamp(2rem, 4vw, 3rem); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); border: 1px solid var(--line); line-height: 0; }
+.contact-map iframe { width: 100%; height: clamp(320px, 42vw, 460px); display: block; border: 0; }
 
 /* ---------- FOOTER ---------- */
 footer { background: var(--ink); color: oklch(0.82 0.018 250); padding: 3.4rem 0 2rem; }

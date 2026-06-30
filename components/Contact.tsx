@@ -64,6 +64,18 @@ export default function Contact() {
           </div>
           <BookingForm />
         </div>
+        <div className="contact-map" data-reveal="">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.940798182664!2d72.9711655759382!3d19.19778794813642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b9582c4603c3%3A0x8b29e05e0fd68262!2sSamah%20Dental%20Care!5e0!3m2!1sen!2sin!4v1782844906892!5m2!1sen!2sin"
+            title="Samah Dental Care location on Google Maps"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen
+            loading="lazy"
+            referrerPolicy="strict-origin-when-cross-origin"
+          />
+        </div>
       </div>
     </section>
   );

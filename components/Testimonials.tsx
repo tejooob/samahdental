@@ -1,3 +1,5 @@
+import { GOOGLE_REVIEWS_URL } from "@/lib/site";
+
 export default function Testimonials() {
   return (
     <section className="section" id="reviews">
@@ -14,14 +16,16 @@ export default function Testimonials() {
           <div className="quote feature" data-reveal="">
             <span className="stars">★★★★★</span>
             <blockquote>
-              &quot;I was terrified of root canals, but Dr. Dikshit made it
-              completely painless. I genuinely felt nothing.&quot;
+              &quot;I highly recommend Dr. Solanki for children&apos;s dental
+              care. I took my daughter here and he patiently explained the
+              treatment to her, which immediately eased her fear. I&apos;m very
+              happy with the experience.&quot;
             </blockquote>
             <div className="who">
-              <span className="ava">M</span>
+              <span className="ava">S</span>
               <div>
-                <b>Mansi Jain</b>
-                <span>Verified patient</span>
+                <b>Sonal Mehta</b>
+                <span>Google review · 4 weeks ago</span>
               </div>
             </div>
           </div>
@@ -29,32 +33,49 @@ export default function Testimonials() {
             <div className="quote" data-reveal="" data-d="1">
               <span className="stars">★★★★★</span>
               <blockquote>
-                &quot;Very smooth experience, genuine advice, and very hygienic
-                throughout.&quot;
+                &quot;Best dentist experience I&apos;ve ever had. The doctor and
+                the entire staff are incredibly kind, honest, and professional.
+                You feel welcome and safe from the moment you walk in.&quot;
               </blockquote>
               <div className="who">
-                <span className="ava">R</span>
+                <span className="ava">M</span>
                 <div>
-                  <b>Ruchika Kothari</b>
-                  <span>Verified patient</span>
+                  <b>Melvin Pinto</b>
+                  <span>Google review · a month ago</span>
                 </div>
               </div>
             </div>
             <div className="quote" data-reveal="" data-d="2">
               <span className="stars">★★★★★</span>
               <blockquote>
-                &quot;My kids actually love visiting the dentist now. The whole
-                team is so reassuring.&quot;
+                &quot;Excellent dental care and professional service. The dentist
+                was friendly, explained everything clearly, and made the
+                treatment comfortable. Highly recommended.&quot;
               </blockquote>
               <div className="who">
-                <span className="ava">R</span>
+                <span className="ava">J</span>
                 <div>
-                  <b>Rajiv T.</b>
-                  <span>Verified patient</span>
+                  <b>Jainam Chopda</b>
+                  <span>Google review · 1 week ago</span>
                 </div>
               </div>
             </div>
           </div>
+        </div>
+
+        <div className="reviews-cta" data-reveal="">
+          <p className="reviews-rating">
+            <span className="stars">★★★★★</span>
+            <b>5.0</b> rated on Google
+          </p>
+          <a
+            href={GOOGLE_REVIEWS_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn-solid"
+          >
+            Read all Google reviews <span className="arw">→</span>
+          </a>
         </div>
       </div>
     </section>
