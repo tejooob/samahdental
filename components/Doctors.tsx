@@ -10,6 +10,7 @@ type Doctor = {
   quote: string;
   education: Entry[];
   experience: Entry[];
+  service: { href: string; label: string };
   delay: string;
 };
 
@@ -52,6 +53,7 @@ const doctors: Doctor[] = [
         when: "Full-scope clinical training",
       },
     ],
+    service: { href: "/root-canal-treatment/", label: "Explore root canal treatment" },
     delay: "1",
   },
   {
@@ -91,6 +93,7 @@ const doctors: Doctor[] = [
         when: "Full-scope clinical training",
       },
     ],
+    service: { href: "/dental-implants-and-dentures/", label: "Explore implants & dentures" },
     delay: "2",
   },
 ];
@@ -161,6 +164,9 @@ export default function Doctors() {
                   </ul>
                 </div>
               </div>
+              <a className="profile-link" href={d.service.href}>
+                {d.service.label} <span aria-hidden="true">→</span>
+              </a>
             </div>
           </article>
         ))}

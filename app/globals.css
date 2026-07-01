@@ -179,6 +179,9 @@ nav.links a:hover::after { width: 100%; }
 .cv li b { display: block; font-weight: 600; font-size: 0.92rem; color: var(--ink); }
 .cv li span { font-size: 0.82rem; color: var(--ink-2); }
 .cv li em { font-style: normal; font-size: 0.76rem; color: var(--ink-3); letter-spacing: 0.02em; }
+.profile-link { display: inline-flex; align-items: center; gap: 0.4rem; margin-top: 1.6rem; font-weight: 600; font-size: 0.92rem; color: var(--brand-deep); }
+.profile-link span { transition: transform 0.35s var(--ease); }
+.profile-link:hover span { transform: translateX(4px); }
 
 /* ---------- TREATMENTS ---------- */
 .treat-grid { display: grid; grid-template-columns: 0.85fr 1.15fr; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
@@ -334,8 +337,66 @@ footer { background: var(--ink); color: oklch(0.82 0.018 250); padding: 3.4rem 0
   .strip-track { animation: none; }
 }
 
+/* ---------- SERVICE PAGES ---------- */
+.svc-hero { position: relative; padding: clamp(7rem, 12vw, 9.5rem) 0 clamp(3rem, 5vw, 4.5rem); overflow: hidden; }
+.svc-hero::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(120% 90% at 100% 0%, var(--brand-tint), transparent 55%); }
+.svc-hero-grid { display: grid; grid-template-columns: 1.05fr 0.95fr; gap: clamp(2rem, 5vw, 4.5rem); align-items: center; }
+.svc-hero-grid > * { min-width: 0; }
+.breadcrumb { display: flex; align-items: center; gap: 0.55rem; font-size: 0.82rem; color: var(--ink-3); margin-bottom: 1.1rem; }
+.breadcrumb a:hover { color: var(--brand-deep); }
+.svc-h1 { font-size: clamp(2.3rem, 5.2vw, 4rem); letter-spacing: -0.03em; margin-bottom: 1.2rem; overflow-wrap: break-word; }
+.svc-hero .lead { margin-bottom: 2.1rem; }
+.svc-hero-media img { width: 100%; aspect-ratio: 5 / 4; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+.svc-split-grid { display: grid; grid-template-columns: 0.92fr 1.08fr; gap: clamp(2.5rem, 6vw, 5rem); align-items: center; }
+.svc-split-grid > * { min-width: 0; }
+.svc-media img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; border-radius: var(--radius); box-shadow: var(--shadow); }
+.svc-media-cap { font-size: 0.86rem; color: var(--ink-3); margin-top: 0.8rem; font-style: italic; font-family: var(--serif); }
+
+.svc-offer { background: var(--bg-warm); }
+.svc-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.1rem; margin-top: 3rem; }
+.svc-item { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.7rem 1.6rem; transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease); }
+.svc-item:hover { transform: translateY(-4px); box-shadow: var(--shadow-sm); }
+.svc-item h3 { font-size: 1.35rem; }
+.svc-item p { color: var(--ink-2); font-size: 0.94rem; margin-top: 0.5rem; }
+
+.svc-benefits { position: relative; background: var(--brand-darker); color: oklch(0.96 0.012 250); }
+.svc-benefits .h-section { color: oklch(0.96 0.012 250); }
+.svc-benefits-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.6rem; margin-top: 2.8rem; }
+.svc-benefit { padding: 1.7rem 1.6rem; border-radius: var(--radius); background: oklch(0.99 0.004 250 / 0.05); border: 1px solid var(--line-light); }
+.svc-benefit h3 { font-size: 1.35rem; margin-bottom: 0.5rem; }
+.svc-benefit p { color: oklch(0.86 0.02 250); font-size: 0.93rem; }
+
+.svc-doc { display: grid; grid-template-columns: 260px 1fr; gap: clamp(1.8rem, 4vw, 3rem); align-items: center; }
+.svc-doc > * { min-width: 0; }
+.svc-doc-id { border-radius: var(--radius); overflow: hidden; aspect-ratio: 4 / 5; display: grid; place-items: center; background: linear-gradient(160deg, var(--brand) 0%, var(--brand-darker) 100%); box-shadow: var(--shadow); }
+.svc-doc-id.has-photo img { width: 100%; height: 100%; object-fit: cover; object-position: center 28%; filter: grayscale(1) contrast(1.02); }
+.svc-doc-id .mono { font-family: var(--serif); font-size: 4rem; font-weight: 600; color: oklch(0.99 0.004 250); letter-spacing: -0.03em; }
+.svc-doc-cred { color: var(--brand-deep); font-weight: 600; font-size: 0.86rem; margin-top: 0.5rem; }
+
+.faq { max-width: 780px; margin: 3rem auto 0; }
+.faq-item { border-bottom: 1px solid var(--line); }
+.faq-item summary { list-style: none; cursor: pointer; padding: 1.3rem 0.2rem; font-family: var(--serif); font-size: clamp(1.15rem, 2vw, 1.4rem); color: var(--ink); display: flex; justify-content: space-between; align-items: center; gap: 1rem; }
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-item summary::after { content: "+"; font-family: var(--sans); font-weight: 400; font-size: 1.5rem; color: var(--brand-deep); transition: transform 0.3s var(--ease); }
+.faq-item[open] summary::after { transform: rotate(45deg); }
+.faq-item p { color: var(--ink-2); font-size: 0.98rem; padding: 0 0.2rem 1.4rem; max-width: 68ch; }
+
+.svc-cta { background: var(--brand-darker); color: oklch(0.96 0.012 250); padding: clamp(3.5rem, 7vw, 5.5rem) 0; }
+.svc-cta-inner { display: flex; justify-content: space-between; align-items: center; gap: 2rem; flex-wrap: wrap; }
+.svc-cta .h-section { color: oklch(0.96 0.012 250); }
+.svc-cta-inner p { color: oklch(0.86 0.02 250); margin-top: 0.7rem; max-width: 40ch; }
+.svc-cta-actions { display: flex; gap: 0.8rem; flex-wrap: wrap; }
+.btn-ghost-light { border-color: oklch(0.99 0.004 250 / 0.35); color: oklch(0.97 0.008 250); }
+.btn-ghost-light:hover { background: oklch(0.99 0.004 250); color: var(--brand-darker); border-color: oklch(0.99 0.004 250); }
+.svc-related { display: inline-block; margin-top: 2.6rem; padding-top: 1.6rem; border-top: 1px solid var(--line-light); color: oklch(0.82 0.09 252); font-family: var(--serif); font-style: italic; font-size: 1.15rem; }
+.svc-related:hover { color: oklch(0.9 0.06 252); }
+
 /* ---------- RESPONSIVE ---------- */
 @media (max-width: 940px) {
+  .svc-hero-grid, .svc-split-grid, .svc-doc { grid-template-columns: 1fr; }
+  .svc-hero-media, .svc-split-grid .svc-media { max-width: min(460px, 100%); margin-inline: auto; }
+  .svc-doc-id { aspect-ratio: 4 / 3; max-width: min(420px, 100%); margin-inline: auto; }
   nav.links, .nav-phone, .nav-end .btn-solid { display: none; }
   .burger { display: flex; }
   .hero-grid, .about-grid, .doc-grid, .treat-grid, .test-grid, .contact-grid { grid-template-columns: minmax(0, 1fr); }

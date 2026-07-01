@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Petrona, Hanken_Grotesk } from "next/font/google";
+import { SITE_URL } from "@/lib/site";
 import "./globals.css";
 
 const serif = Petrona({
@@ -18,6 +19,7 @@ const sans = Hanken_Grotesk({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: "Samah Dental Care — Specialist Dental Surgeons in Thane",
   description:
     "Painless, personalised dental care in Charai, Thane. Specialist MDS surgeons Dr. Dikshit & Dr. Riddhi Solanki for root canals, implants, and smile makeovers.",

@@ -1,9 +1,10 @@
 const links: [string, string][] = [
-  ["#about", "The Clinic"],
-  ["#doctors", "Specialists"],
-  ["#treatments", "Treatments"],
-  ["#reviews", "Reviews"],
-  ["#contact", "Book a visit"],
+  ["/#about", "The Clinic"],
+  ["/#doctors", "Specialists"],
+  ["/root-canal-treatment/", "Root Canal Treatment"],
+  ["/dental-implants-and-dentures/", "Implants & Dentures"],
+  ["/#reviews", "Reviews"],
+  ["/#contact", "Book a visit"],
 ];
 
 export default function Footer() {

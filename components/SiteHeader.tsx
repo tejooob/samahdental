@@ -3,11 +3,11 @@
 import { useEffect, useState } from "react";
 
 const links: [string, string][] = [
-  ["#about", "The Clinic"],
-  ["#doctors", "Specialists"],
-  ["#treatments", "Treatments"],
-  ["#why", "Why Samah"],
-  ["#reviews", "Reviews"],
+  ["/#about", "The Clinic"],
+  ["/#doctors", "Specialists"],
+  ["/root-canal-treatment/", "Root Canals"],
+  ["/dental-implants-and-dentures/", "Implants & Dentures"],
+  ["/#reviews", "Reviews"],
 ];
 
 export default function SiteHeader() {
@@ -32,7 +32,7 @@ export default function SiteHeader() {
     <>
       <header className={`nav${scrolled ? " scrolled" : ""}`}>
         <div className="wrap nav-inner">
-          <a href="#home" className="brand">
+          <a href="/" className="brand">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src="/logo-mark.png" alt="Samah Dental Care" className="brand-logo" />
             <span className="names">
@@ -53,7 +53,7 @@ export default function SiteHeader() {
             <a href="tel:+917977557010" className="nav-phone">
               +91 79775 57010
             </a>
-            <a href="#contact" className="btn btn-solid">
+            <a href="/#contact" className="btn btn-solid">
               Book a visit <span className="arw">→</span>
             </a>
             <button
@@ -83,7 +83,7 @@ export default function SiteHeader() {
           </a>
         ))}
         <a
-          href="#contact"
+          href="/#contact"
           className="btn btn-solid"
           onClick={() => setOpen(false)}
         >
